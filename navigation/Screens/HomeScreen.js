@@ -1,12 +1,14 @@
 import * as React from 'react';
+import { useEffect, useState } from 'react';
 import {View, Text, Image, StyleSheet, Platform} from 'react-native';
 import { Avatar, Button, Card, Title, Paragraph } from 'react-native-paper';
-
+import firebase from '../../database/firebase'
 import firestore from '@react-native-firebase/firestore';
+import { doc, QuerySnapshot } from 'firebase/firestore';
 
 
 
-const usersCollection = firestore().collection('Usuarios');
+const usersCollection = firebase.db.collection('Usuarios');
 /*const cards = [
     {
         id: usersCollection.doc('1BgihrESZwfabm5zpK19').id,
@@ -45,12 +47,22 @@ const usersCollection = firestore().collection('Usuarios');
         content: <Text>{usersCollection.doc('xSi8FKkyI8Aro0vcyScx').Gustos}</Text>
     },
   ]*/
-
+  var nombreTest=firebase.db.collection("Usuarios").doc('1BgihrESZwfabm5zpK19').Nombre;
   
   export default function HomeScreen({navigation}) {
-        return (
+    // const [users, setUsers] = useState([]);
+    
+    // useEffect(()=>{
+    //     firebase.db.collection("Usuarios").onSnapshot(querySnapshot =>{
+    //         querySnapshot.docs.forEach(doc =>{
+    //             console.log(doc.data)
+    //         })
+    //     })
+    // },[])
+    console.log(nombreTest)
+    return (
             <View style={styles.container}>
-                <Text>puto</Text>
+                <Text>test</Text>
             </View>
         );
 }
