@@ -47,7 +47,7 @@ const usersCollection = firebase.db.collection('Usuarios');
         content: <Text>{usersCollection.doc('xSi8FKkyI8Aro0vcyScx').Gustos}</Text>
     },
   ]*/
-  var nombreTest=firebase.db.collection("Usuarios").doc('1BgihrESZwfabm5zpK19').Nombre;
+  //var nombreTest=firebase.db.collection("Usuarios").doc('1BgihrESZwfabm5zpK19').Nombre;
   
   export default function HomeScreen({navigation}) {
     // const [users, setUsers] = useState([]);
@@ -59,7 +59,7 @@ const usersCollection = firebase.db.collection('Usuarios');
     //         })
     //     })
     // },[])
-    console.log(nombreTest)
+    //console.log(nombreTest)
     return (
             <View style={styles.container}>
                 <Text>test</Text>
